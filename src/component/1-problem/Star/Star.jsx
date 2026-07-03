@@ -1,11 +1,10 @@
 import classes from './styles.module.scss'
 
 const Star = ({
-    position = 0,
     index = 0,
     onChange = () => {},
     handleHoverPosition = () => {},
-    isFilled = () => {}
+    isFilled = false
 }) => {
 
     const handleStarClick = () => {
@@ -15,18 +14,12 @@ const Star = ({
     const handleHoverEnter = () => {
         handleHoverPosition(index + 1)
     }
-    
-    const handleHoverLeave = () => {
-        handleHoverPosition(position)
-    }
-
 
     return (
         <div 
             className={`${classes.container} ${isFilled ? classes.filled: ''} `} 
             onClick={handleStarClick}
             onMouseEnter={handleHoverEnter}
-            onMouseLeave={handleHoverLeave}
         >
             
         </div>

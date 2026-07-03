@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import StarReview from './component/StarReview'
+import StarReview from './component/1-problem/StarReview';
+
 
 function App() {
   return (

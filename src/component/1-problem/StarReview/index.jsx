@@ -10,9 +10,6 @@ const StarReview = ({
     const [position, setPosition] = useState(0)
     const [hoverPosition, setHoverPosition] = useState(0)
 
-    console.log("# POSITION: ", position)
-    console.log("# hoverPosition: ", hoverPosition)
-
     function handleOnChange(value) {
         setPosition(value)
     }
@@ -22,19 +19,18 @@ const StarReview = ({
     }
 
     function getIsFilled(index) {
-        if(hoverPosition > position) {
-            return index < hoverPosition
-        } else {
-            return index < position
-        }
+        const activePosition = hoverPosition > 0 ? hoverPosition : position
+        return index < activePosition
     }
 
     return (
-        <div className={classes.container}>
+        <div
+            className={classes.container}
+            onMouseLeave={() => setHoverPosition(0)}
+        >
             {stars.map((item, index) => {
                 return <Star 
                     index={index}
-                    position={position}
                     key={`star_${index}`} 
                     onChange={handleOnChange} 
                     handleHoverPosition={handleHoverPosition}
