@@ -1,0 +1,31 @@
+.container {
+  text-align: left;
+  width: 500px;
+  margin: 20px auto;
+  font-family: monospace;
+}
+
+.node {
+  user-select: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+.icon {
+  width: 20px;
+}
+
+.children {
+  border-left: 1px solid #ddd;
+  margin-left: 10px;
+}

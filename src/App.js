@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import StarReview from './component/1-problem/StarReview';
+import RecursiveComment from './component/3-problem/RecursiveComment';
 
 
 function App() {
   return (
     <div className="App">
-       <StarReview size={5} />
+       <RecursiveComment />
     </div>
   );
 }

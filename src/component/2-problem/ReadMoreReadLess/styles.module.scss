@@ -1,0 +1,17 @@
+.container {
+  width: 500px;
+  margin: 40px auto;
+  font-family: sans-serif;
+}
+
+.content {
+  overflow: hidden;
+  transition: height 350ms ease;
+  line-height: 1.7;
+}
+
+.toggle {
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 8px 18px;
+}
